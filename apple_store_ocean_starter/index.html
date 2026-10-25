@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apple Store — Discover Your Next Device</title>
+
+    <!-- Connect the CSS file so this page gets its design. -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Defer makes JavaScript wait until the HTML has been parsed. -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Decorative ocean shapes are created with CSS; no image is required. -->
+    <div class="ocean-glow ocean-glow-one" aria-hidden="true"></div>
+    <div class="ocean-glow ocean-glow-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="Apple Store home">
+            <!-- Simple inline Apple-shaped mark so it does not need an image file. -->
+            <svg class="apple-mark" viewBox="0 0 64 76" role="img" aria-label="Apple-inspired logo">
+                <path d="M42 13C45 7 44 3 44 3S35 4 31 10c-3 4-3 8-3 8s9 0 14-5Z" fill="currentColor"/>
+                <path d="M52 39c0-9 7-14 7-14-5-7-13-8-16-8-7-1-12 4-16 4-5 0-9-4-15-3C4 20 0 29 0 39c0 7 3 15 6 21 3 5 6 11 11 11 5 0 7-3 13-3s8 3 13 3 8-5 11-11c3-5 5-11 5-15-1 0-7-2-7-6Z" fill="currentColor" transform="translate(3 0) scale(.9)"/>
+            </svg>
+            <span>Apple Store</span>
+        </a>
+
+        <nav class="top-nav" aria-label="Main navigation">
+            <a href="#catalog">Explore products</a>
+            <a href="#about">About this demo</a>
+            <button class="nav-button" id="openCatalogButton" type="button">Browse catalogue</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="heroTitle">
+            <p class="eyebrow">A little more wonder.</p>
+            <h1 id="heroTitle">Welcome to Apple Store.</h1>
+            <p class="hero-copy">
+                Find the Apple device that fits your world. Explore product families,
+                open a product, and learn its key specifications.
+            </p>
+            <div class="hero-actions">
+                <button class="primary-button" id="heroBrowseButton" type="button">Explore products <span aria-hidden="true">↗</span></button>
+                <span class="hero-note">A beginner-friendly interactive demo</span>
+            </div>
+            <div class="hero-device-row" aria-label="Product categories">
+                <span>iPhone</span><span>Mac</span><span>iPad</span><span>Watch</span><span>Audio</span><span>Home</span>
+            </div>
+        </section>
+
+        <section class="catalog-section" id="catalog" aria-labelledby="catalogTitle">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Find your favourite</p>
+                    <h2 id="catalogTitle">Explore the lineup</h2>
+                </div>
+                <p class="section-copy">Choose a category or search for a device. Select any card to see its key details.</p>
+            </div>
+
+            <!-- JavaScript fills these category buttons from the product data. -->
+            <div class="category-filters" id="categoryFilters" aria-label="Filter products by category"></div>
+
+            <label class="search-box">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <span class="visually-hidden">Search products</span>
+                <input id="productSearch" type="search" placeholder="Search products, chips, or features..." autocomplete="off">
+                <kbd>Search</kbd>
+            </label>
+
+            <!-- JavaScript creates product cards inside this grid. -->
+            <div class="product-grid" id="productGrid" aria-live="polite"></div>
+            <p class="catalog-note">
+                Product names and summary specifications are a learning-demo catalogue, not a complete historical archive.
+                Availability and exact configurations vary by country. Confirm details on Apple’s official website before buying.
+            </p>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-card">
+                <span class="about-icon" aria-hidden="true">🌊</span>
+                <div>
+                    <p class="eyebrow">Made for learning</p>
+                    <h2>Explore. Select. Learn.</h2>
+                    <p>This demo uses HTML for structure, CSS for the ocean-inspired design, and JavaScript to filter products and open specification pop-ups.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>Apple Store — student project demo</span>
+        <span>Not affiliated with Apple Inc.</span>
+    </footer>
+
+    <!-- The catalogue popup opens automatically when the page loads. -->
+    <div class="modal-backdrop" id="catalogModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal modal-catalog">
+            <button class="modal-close" id="closeCatalogButton" type="button" aria-label="Close product catalogue">×</button>
+            <div class="modal-intro">
+                <p class="eyebrow">Welcome in</p>
+                <h2 id="modalTitle">What would you like to explore?</h2>
+                <p>Choose a product to view its key specifications. You can close this window and browse the full page any time.</p>
+            </div>
+            <div class="modal-category-grid" id="modalProductGrid"></div>
+            <button class="text-button" id="enterStoreButton" type="button">Enter store and browse all products <span aria-hidden="true">→</span></button>
+        </div>
+    </div>
+
+    <!-- A second popup displays specifications for the selected product. -->
+    <div class="modal-backdrop detail-backdrop" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsTitle" hidden>
+        <div class="modal modal-details">
+            <button class="modal-close" id="closeDetailsButton" type="button" aria-label="Close product details">×</button>
+            <div id="detailsContent"></div>
+        </div>
+    </div>
+</body>
+</html>

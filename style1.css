@@ -1,0 +1,42 @@
+
+/* JavaScript demonstration section */
+
+.container {
+    width: min(90%, 800px);
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.container p {
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+.container button {
+    margin: 5px;
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 8px;
+}
+
+.container button:hover {
+    background-color: #1d4ed8;
+}
+
+#resetButton {
+    background-color: #475569;
+}
+
+#status {
+    margin-top: 25px;
+    font-weight: bold;
+}
