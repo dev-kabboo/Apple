@@ -5,7 +5,11 @@ public class iPhoneDuo {
         System.out.println("Duo is not worth buying");
         System.out.println("It's too expensive!");
 
-        // GitHub Pull Req
-        System.out.println("Feature changes for pull request!");
+        // GitHub pull request testing
+        System.out.println("New feature add for GitHub Pull Request Testing");
+        System.out.println("Ye Bhi Thik Hain");
+
+        // GitHub pull request2 testing
+        System.out.println("Pull Request 2");
     }
 }
