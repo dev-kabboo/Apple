@@ -6,6 +6,10 @@ class Customer{
     public void helloCus(){
         System.out.println("Hello " + name + ". How can I help you?");
     }
+
+    public void purModel(){
+        System.out.println("Which model are you willing to purchase, Sir?");
+    }
 }
 
 public class MyAppleStore {
@@ -26,5 +30,6 @@ public class MyAppleStore {
 
         // Method calling from our custom class
         kabbo.helloCus();
+        kabbo.purModel();
     }
 }
