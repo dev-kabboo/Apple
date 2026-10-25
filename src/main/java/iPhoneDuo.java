@@ -8,5 +8,8 @@ public class iPhoneDuo {
         // GitHub pull request testing
         System.out.println("New feature add for GitHub Pull Request Testing");
         System.out.println("Ye Bhi Thik Hain");
+
+        // GitHub pull request2 testing
+        System.out.println("Pull Request 2");
     }
 }
