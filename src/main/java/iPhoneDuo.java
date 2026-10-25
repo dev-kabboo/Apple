@@ -4,5 +4,8 @@ public class iPhoneDuo {
         System.out.println("The first folding iPhone is here");
         System.out.println("Duo is not worth buying");
         System.out.println("It's too expensive!");
+
+        // GitHub Pull Req
+        System.out.println("Feature changes for pull request!");
     }
 }
